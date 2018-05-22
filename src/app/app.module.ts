@@ -1,6 +1,7 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
@@ -12,7 +13,7 @@ import {
     MatIconModule,
     MatListModule
 } from '@angular/material';
-
+const appRoutes: Routes = [{ path: 'first-page', component: AppComponent }];
 @NgModule({
     declarations: [AppComponent, MainNavComponent],
     imports: [
@@ -23,7 +24,8 @@ import {
         MatSidenavModule,
         MatIconModule,
         MatListModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        RouterModule.forRoot(appRoutes)
     ],
     providers: [],
     bootstrap: [AppComponent]
