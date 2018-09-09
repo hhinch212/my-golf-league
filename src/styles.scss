@@ -1,3 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
 @import './custom-theme';
 body { margin: 0; }
+
+.mat-column-description {
+  flex:0 0 10%;
+
+}
+
+.mat-column-date {
+  flex:0 0 5%;
+
+}

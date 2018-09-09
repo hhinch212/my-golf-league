@@ -1,31 +1,44 @@
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-
-import { AppComponent } from './app.component';
-import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { NgModule } from '@angular/core';
 import {
-    MatToolbarModule,
     MatButtonModule,
-    MatSidenavModule,
+    MatCardModule,
+    MatExpansionModule,
+    MatGridListModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatPaginatorModule,
+    MatSidenavModule,
+    MatSortModule,
+    MatTableModule,
+    MatToolbarModule
 } from '@angular/material';
-const appRoutes: Routes = [{ path: 'first-page', component: AppComponent }];
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule, Routes } from '@angular/router';
+import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { MainNavComponent } from './main-nav/main-nav.component';
+
+const appRoutes: Routes = [{ path: 'home', component: HomeComponent }];
 @NgModule({
-    declarations: [AppComponent, MainNavComponent],
+    declarations: [AppComponent, MainNavComponent, HomeComponent],
     imports: [
         BrowserModule,
         LayoutModule,
         MatToolbarModule,
         MatButtonModule,
+        MatExpansionModule,
         MatSidenavModule,
         MatIconModule,
         MatListModule,
+        MatGridListModule,
+        MatCardModule,
+        MatTableModule,
         BrowserAnimationsModule,
-        RouterModule.forRoot(appRoutes)
+        RouterModule.forRoot(appRoutes),
+        MatPaginatorModule,
+        MatSortModule
     ],
     providers: [],
     bootstrap: [AppComponent]

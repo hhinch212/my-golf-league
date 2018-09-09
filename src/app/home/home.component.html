@@ -1,0 +1,76 @@
+<div class="container-fluid">
+
+  <mat-expansion-panel expanded="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title> 2018 Dates</mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <div class="mat-elevation-z8">
+      <mat-table [dataSource]=" headerRows" color="accent">
+        <ng-container matColumnDef="description">
+          <mat-header-cell *matHeaderCellDef></mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.title}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="contents">
+          <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.contents}}</mat-cell>
+        </ng-container>
+
+
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+    </div>
+    <br>
+
+    <div class="mat-elevation-z8">
+
+      <mat-table [dataSource]="outingDetails">
+        <ng-container matColumnDef="description">
+          <mat-header-cell *matHeaderCellDef>YEAR-END OUTING</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.title}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="contents">
+          <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.contents}}</mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+    </div>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel expanded="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title>GRATS TO OUR 2017 LEAGUE CHAMPION, BRIAN HART!!!!</mat-panel-title>
+    </mat-expansion-panel-header>
+    <img src="assets/2017_league_champ.jpg" width="320" height="240">
+  </mat-expansion-panel>
+
+  <mat-expansion-panel expanded="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title>Updates</mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="mat-elevation-z8">
+
+      <mat-table [dataSource]="updates">
+        <ng-container matColumnDef="date">
+          <mat-header-cell *matHeaderCellDef></mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.date}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="contents">
+          <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.contents}}</mat-cell>
+        </ng-container>
+
+
+        <mat-row *matRowDef="let row; columns: updateDisplayedColumns;"></mat-row>
+      </mat-table>
+    </div>
+  </mat-expansion-panel>
+
+
+</div>
