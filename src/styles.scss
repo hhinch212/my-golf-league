@@ -1,5 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
+
+
+
+
+
 @import './custom-theme';
 body { margin: 0; }
 
@@ -12,3 +17,10 @@ body { margin: 0; }
   flex:0 0 5%;
 
 }
+// AG - GRID
+$ag-mat-primary: mat-color($custom-theme-primary);
+$ag-mat-accent: mat-color($custom-theme-accent);
+$ag-mat-icons-path: "~ag-grid-community/src/styles/material-icons/";
+$ag-icons-path: "~ag-grid-community/src/styles/icons/";
+@import "~ag-grid-community/src/styles/ag-grid";
+@import '~ag-grid-community/src/styles/ag-theme-material';
